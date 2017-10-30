@@ -1,4 +1,27 @@
 let gridSize = 16;
+let colorArray = [];
+let currentColor = '#000000';
+
+function generateColorPicker() {
+  let red = '';
+  let green = '';
+  let blue = '';
+  let hexConvert = ['00', '55', 'AA', 'FF'];
+  for (i=0; i<4; i++) {
+    for (m=0; m<4; m++) {
+      for (n=0; n<4; n++) {
+        colorArray.push("#"+hexConvert[i]+hexConvert[m]+hexConvert[n]);
+      }
+    }
+  }
+  for (i=0; i < 64; i++) {
+    $('#colorPicker').append('<div class="colorSquare"></div>');
+  }
+  for (i=0; i < 64; i++) {
+    $('#colorPicker').children().eq(i).css('background-color', colorArray[i]);
+  }
+  $('#colorPicker').children().first().addClass('selectedColor');
+}
 
 function generateGrid(gridDimen) {
   let numSquares = gridDimen * gridDimen;
@@ -27,6 +50,7 @@ function resizeGrid() {
 }
 
 $(document).ready(function() {
+  generateColorPicker();
   generateGrid(gridSize);
   
   $('#clearButton').on('mouseup', function() {
@@ -38,6 +62,12 @@ $(document).ready(function() {
   });
 
   $(document).on('mouseenter', '.gridSquare', function() {
-    $(this).css('background-color', '#000');
+    $(this).css('background-color', currentColor);
   });
+
+  $('#colorPicker').on('mouseup', 'div', function() {
+    $(this).siblings().removeClass('selectedColor');
+    $(this).addClass('selectedColor');
+    currentColor = colorArray[$('#colorPicker').children().index(this)];
+  })
 });

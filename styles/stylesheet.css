@@ -1,8 +1,8 @@
 button {
   display: block;
-  margin: 15px auto;
+  margin: 10px auto;
   width: 50%;
-  padding: 10px;
+  padding: 5px;
 }
 
 .frames {
@@ -24,3 +24,15 @@ button {
 .gridSquare {
   float: left;
 }
+
+.colorSquare {
+  float: left;
+  width: 40px;
+  height: 30px;
+}
+
+.selectedColor {
+  border: 2px solid red;
+  width: 36px !important;
+  height: 26px !important;
+
