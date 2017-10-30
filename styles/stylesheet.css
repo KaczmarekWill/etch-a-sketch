@@ -1,24 +1,41 @@
-button {
-  display: block;
-  margin: 10px auto;
-  width: 50%;
-  padding: 5px;
+#pageBackground {
+  background-color: red;
+  height: 100vh;
+}
+
+#etchASketch {
+  padding-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width:808px; 
+  height:604px;
+}
+
+h2 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+
+.menuButton {
+  margin-bottom: 10px;
 }
 
 .frames {
-  border: 2px solid black;
+  border: 2px solid silver;
 }
 
 #menuBox {
   float: left;
-  height: 600px;
-  width: 200px;
+  height: 604px;
+  width: 204px;
+  background-color: #ccc;
 }
 
 #gridBox {
   float: left;
-  height: 600px;
-  width: 600px;
+  height: 604px;
+  width: 604px;
+  background-color: white;
 }
 
 .gridSquare {
@@ -33,6 +50,5 @@ button {
 
 .selectedColor {
   border: 2px solid red;
-  width: 36px !important;
-  height: 26px !important;
+}
 

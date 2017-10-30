@@ -2,16 +2,26 @@
 <html>
   <head>
     <title>Etch-A-Sketch</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/stylesheet.css" type="text/css">
-  </head>
+      </head>
   <body>
-    <div id="menuBox" class="frames">
-      <button type="button" id="clearButton">Clear Grid</button>
-      <button type="button" id="gridResize">Grid Size</button>
-      <div id="colorPicker"></div>
+    <div id="pageBackground">
+      <div id="etchASketch">
+        <div id="menuBox" class="frames">
+          <h2>Etch-A-Sketch</h2>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center menuButton"><button type="button" id="clearButton" class="btn-danger">Clear Grid</button></div>
+            <div class="col-md-8 col-md-offset-2 text-center menuButton"><button type="button" id="gridResize" class="btn-info">Grid Size</button></div>
+          </div>
+          <div id="colorPicker"></div>
+        </div>
+        <div id="gridBox" class="frames"></div>
+      </div>
     </div>
-    <div id="gridBox" class="frames"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 </html>
