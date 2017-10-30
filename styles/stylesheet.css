@@ -1,0 +1,19 @@
+.frames {
+  border: 2px solid black;
+}
+
+#menuBox {
+  float: left;
+  height: 600px;
+  width: 200px;
+}
+
+#gridBox {
+  float: left;
+  height: 600px;
+  width: 600px;
+}
+
+.gridSquare {
+  float: left;
+}
